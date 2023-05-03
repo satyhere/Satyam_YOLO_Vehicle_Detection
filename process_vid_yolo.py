@@ -1,16 +1,6 @@
 #! /usr/bin/env python
 '''
-Run a YOLO_v2 style detection model on test video.
-Author: Tawn Kramer
-Date: 08/03/2017
-
-Brief: Use YOLO_v2 Neural Network detector to identigy objects. Uses the yad2k
-https://github.com/allanzelener/YAD2K.git
-This keeps list of bounding boxes identified by class. This will attempt to update
-the bounding boxes of cars with lane information and estimated speed. It will use
-the average color and position to help match against boxes each frame. It will
-apply some smoothing to stabilize the boxes and speed estimates.
-
+Use YOLO_v2 Neural Network detector to identify objects.
 '''
 import argparse
 import colorsys
@@ -375,15 +365,7 @@ class BBoxMan(object):
         for box in self.boxes:
             box.age -= decay
             if box.age < 0.0:
-                '''
-                this was my ides to try to keep continuity
-                when a box passes behind another. Not working that great.
-                if box.maybe_obscured(self.boxes):
-                    box.age = 3.0
-                    box.obscurred = True
-                    box.vel[1] = 0.0 #don't go up
-                    continue            
-                '''
+                
                 remove_arr.append(box)
 
         for box in remove_arr:

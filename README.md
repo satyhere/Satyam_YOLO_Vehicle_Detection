@@ -15,9 +15,6 @@ The goals / steps of this project are the following:
 
 ## Final Result Video
 
-[![IMAGE ALT TEXT](https://img.youtube.com/vi/FdZvMoP0dRU/0.jpg)](https://www.youtube.com/watch?v=FdZvMoP0dRU "Veh Detection Video.")
-
-
 [//]: # (Image References)
 [image1]: ./examples/car_not_car.png
 [image2]: ./examples/HOG_example.jpg
@@ -38,8 +35,6 @@ The goals / steps of this project are the following:
 
 #### 1. Tracking objects using HOG features from the training images.
 
-The code for this step is contained in the IPython notebook (here)[https://github.com/tawnkramer/CarND-Vehicle-Detection/blob/master/VehicleDetection.ipynb].
-
 I started by reading in all the `vehicle` and `non-vehicle` images.  Here is an example of one of each of the `vehicle` and `non-vehicle` classes:
 
 ![alt text][image1]
@@ -57,7 +52,7 @@ I tried various combinations of parameters and arrived at using the YCrCb colors
 
 #### 3. Training a Classifier using HOG, Color, and Spatial Features
 
-I trained a linear SVM using a combined feature vector of HOG features, spatial features, and a histogram of color features across all three channels of YCrCb. This can be seen in cell 2 of [my python notebook](https://github.com/tawnkramer/CarND-Vehicle-Detection/blob/master/VehicleDetection.ipynb).
+I trained a linear SVM using a combined feature vector of HOG features, spatial features, and a histogram of color features across all three channels of YCrCb. This can be seen in cell 2 of
 The spacial features resized the image to 16x16 pixels and used the resulting color values for each pixel. All three feature vectors were combined and then normalized for each training image.
 
 Training images were categorized as containing or a car or not. And then a Linear SVM was trained with 80% of samples. The resulting 20% were used to validate the results. The accuracy agains the validation set was 100%.
@@ -96,10 +91,6 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 ![alt text][image5]
 
-
-### video result:
-
-[link to my hog video result](./project_video_out.mp4)
 
 ## Neural Network Approach
 
