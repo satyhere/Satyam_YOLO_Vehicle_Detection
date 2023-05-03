@@ -116,7 +116,7 @@ This network uses 24 convolutional layers, with batch normalization and leaky-re
 
 #### 2. Initial scan
 
-I then created a python script to run this scan over multiple frames of a video and output a final video. This script is [here](https://github.com/tawnkramer/CarND-Vehicle-Detection/blob/master/process_vid_yolo.py).
+I then created a python script to run this scan over multiple frames of a video and output a final video. This script is [here](https://github.com/satyhere/Satyam_YOLO_Vehicle_Detection/blob/main/process_vid_yolo.py).
 
 This created much more consistent results, outlining most all cars and very few failures. But the regions were not very stable from frame to frame.
 
@@ -150,9 +150,6 @@ An simple relative speed estimate is done using the bounding box velocity relati
 
 ---
 
-### Video Result
-
-[![IMAGE ALT TEXT](https://img.youtube.com/vi/FdZvMoP0dRU/0.jpg)](https://www.youtube.com/watch?v=FdZvMoP0dRU "Veh Detection Video.")
 
 ---
 
@@ -164,7 +161,7 @@ I enjoyed working with more traditional image feature based methods and classifi
 
 I found the YOLO neural network approach to be immediately powerful. The pre-trained network allowed me to focus on stablizing post-processing and image metrics. The result was robust and overall ran at a faster frame rate.
 
-My lane detection metrics assume a straight road and do not account for curvature. In the later parts of the video you can see where a car along the curve crosses the lane threshold without changing lanes.
+My lane detection metrics assume a straight road and do not account for curvature. In the later parts you can see where a car along the curve crosses the lane threshold without changing lanes.
 
 The car velocity estimate is a weak approximation and included mainly for fun.
 
