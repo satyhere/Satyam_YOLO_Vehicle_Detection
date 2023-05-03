@@ -13,7 +13,7 @@ The goals / steps of this project are the following:
 * Estimate a bounding box for vehicles detected.
 * Evaluate Neural Network approach to object detection
 
-## Final Result Video
+
 
 [//]: # (Image References)
 [image1]: ./examples/car_not_car.png
